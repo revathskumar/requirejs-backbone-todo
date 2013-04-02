@@ -22,6 +22,11 @@ require.config({
   paths: {
     jquery: '../components/jquery/jquery',
     backbone: '../components/backbone-amd/backbone',
-    underscore: '../components/underscore-amd/underscore'
+    underscore: '../components/underscore-amd/underscore',
+    backboneLocalstorage: '../components/backbone.localStorage/backbone.localStorage'
   }
+});
+
+require(['scripts/views/todo-view.js'], function(TodoView){
+  new TodoView();
 });
