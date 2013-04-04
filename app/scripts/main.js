@@ -28,5 +28,6 @@ require.config({
 });
 
 require(['scripts/views/todo-view.js'], function(TodoView){
-  new TodoView();
+  var inputView = new TodoView();
+  inputView.render();
 });
