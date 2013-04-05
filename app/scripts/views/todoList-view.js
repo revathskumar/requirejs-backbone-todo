@@ -5,7 +5,7 @@ define(['backbone','templates'], function(Backbone, JST){
     template: JST['app/scripts/templates/todoList.ejs'],
     el: '.todo-list',
     render: function(){
-
+      $(this.el).append(this.template())
     }
   });
 

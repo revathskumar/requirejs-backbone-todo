@@ -27,7 +27,15 @@ require.config({
   }
 });
 
-require(['scripts/views/todo-view.js'], function(TodoView){
-  var inputView = new TodoView();
-  inputView.render();
-});
+require(
+  ['scripts/views/todo-view.js','scripts/views/todoList-view.js','scripts/collections/todos-collection.js'],
+  function(TodoView, TodoListView, TodoCollection){
+    var inputView = new TodoView();
+    inputView.render();
+
+    var collection = new TodoCollection();
+
+    var listView = new TodoListView({collection: collection});
+    listView.render();
+  }
+);
